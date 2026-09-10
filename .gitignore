@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
+data/raw/*.csv
+data/processed/*
+reports/generated/*
+.pytest_cache/
+*.egg-info/
+
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!reports/generated/.gitkeep
+reports/data_quality_report.csv
+reports/reconciliation_report.csv
