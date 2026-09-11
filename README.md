@@ -1,4 +1,4 @@
-# Air Quality India — ETL & Analytics Pipeline
+# Indian Air Quality ETL & Analytics Pipeline
 
 A portfolio data-engineering project that builds a complete ETL
 pipeline on top of India's public hourly air-quality dataset: extraction,
@@ -8,12 +8,12 @@ reconciliation, and SQL analytics.
 ## 1. Project Objective
 
 Take a large (~708K row), messy, real-world hourly air-quality dataset and
-turn it into a reliable, queryable warehouse — while being explicit and
+turn it into a reliable, queryable warehouse  while being explicit and
 honest about data quality rather than hiding it behind silent deletion or
 imputation. The project demonstrates core data-engineering fundamentals:
 extract/validate/transform/load separation, idempotent loading, SQL schema
 design, reconciliation between two independently-published sources, and
-automated testing — using nothing but Python, Pandas, PostgreSQL, and SQL.
+automated testing  using  Python, Pandas, PostgreSQL, and SQL.
 
 ## 2. Dataset
 
@@ -55,7 +55,7 @@ modules and is unit-tested independently of the notebook.
 1. **Extract** (`src/extract.py`) — reads the raw CSVs, no transformation.
 2. **Validate** (`src/validate.py`) — runs 11 reusable checks and produces
    `reports/data_quality_report.csv`. Only *structurally* broken rows (null
-   City, unparseable Datetime, duplicate key) are excluded from load —
+   City, unparseable Datetime, duplicate key) are excluded from load ,
    extreme values are flagged, never deleted; missing values are never
    imputed.
 3. **Transform** (`src/transform.py`) — aggregates the validated hourly data
