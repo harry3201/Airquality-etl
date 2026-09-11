@@ -182,7 +182,7 @@ and window functions.
 ## 11. Setup Instructions
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/harry3201/Airquality-etl
 cd air_quality_etl
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
@@ -250,11 +250,9 @@ air_quality_etl/
 └── .gitignore
 ```
 
-Note: `src/reconcile.py` is an addition beyond the original module list, kept
-separate from `transform.py` to preserve a clean extract/validate/transform/
-load/reconcile separation of concerns.
 
-## 14. Example Findings
+
+## 14.Findings
 
 - The dataset is structurally very clean (no nulls in key columns, no
   duplicate keys, no negative values, no record-level timestamp gaps) — the
@@ -270,8 +268,7 @@ load/reconcile separation of concerns.
 
 ## 15. Limitations
 
-- PostgreSQL loading requires a running Postgres instance and valid `.env`
-  credentials — it is not simulated or mocked.
+
 - The 5% reconciliation tolerance is a pragmatic choice given the two
   sources' exact aggregation methodology is undocumented; it is not proof of
   bit-for-bit equivalence.
@@ -280,8 +277,7 @@ load/reconcile separation of concerns.
   intentionally a convenience label, reconciled against (not assumed equal
   to) the official bucket.
 - Suspicious-value thresholds (`src/config.py`) are heuristic, informed by
-  the dataset's own distribution and the official AQI scale — not a
-  certified outlier-detection method.
+  the dataset's own distribution and the official AQI scale 
 
 ## 16. Future Improvements
 
